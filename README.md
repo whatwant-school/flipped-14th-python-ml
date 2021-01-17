@@ -1,4 +1,4 @@
-# 혼자 읽기 두껍네 '파이썬 머신러닝 완벽 가이드' (풀입스쿨 14기)
+# 혼자 읽기 두껍네 '파이썬 머신러닝 완벽 가이드' (풀잎스쿨 14기)
 
   - Site : https://home.modulabs.co.kr/product/14th-its-too-thick-to-read-alone-fight-guide-to-python-machine-learning/
   - Notion : https://www.notion.so/9e7e58289d0147a18d0a77e3d7706b28
