@@ -54,3 +54,15 @@
 
 ### 에이다부스트
 - 잘못 예측한 결과에 가중치 부여하는 대표적인 알고리즘
+
+
+## XGBoost (eXtra Gradient Boost)
+
+트리 기반 앙상블 학습의 일종. GBM 기반.
+
+- 파이썬 래퍼 XGBoost
+- 사이킷런 래퍼 XGBoost
+
+
+### 파이썬 래퍼 XGBoost
+GBM과 유사하지만, 조기 중단(early stopping) & 과적합 규제를 위한 하이퍼 파라미터 등이 추가됨
