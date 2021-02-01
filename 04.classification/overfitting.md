@@ -9,6 +9,12 @@
 ### variance
 예측된 값들이 서로간에 얼마나 멀리 떨어져 있는가
 
+### trade-off
+error rate & bias & variance 모두 낮은 부분을 찾아야 한다.
+![tradeoff](img/tradeoff.png)
+
+
+
 
 
 ## Underfitting vs. Overfitting
