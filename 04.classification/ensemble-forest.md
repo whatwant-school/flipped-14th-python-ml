@@ -2,6 +2,10 @@
 ## What is decision tree?
 Choose best feature to split
 
+- 데이터 과학자들이 많이 사용하는 머신러닝 기법
+
+![favorite-model](img/favorite-model.png)
+
 
 ## decision tree vs. random forest
 
@@ -38,3 +42,5 @@ Choose best feature to split
 # Reference
 
 - [Minsuk Heo - 랜덤포레스트](https://www.youtube.com/watch?v=nZB37IBCiSA)
+- [데이터홍교수 도움ai 인생코드 - 랜덤포레스트](https://www.youtube.com/watch?v=BP40f817tL4)
+- [IN WHAT STATE THEY ARE TO BE FOUND?](http://www.dexlabanalytics.com/blog/data-science-and-machine-learning-in-what-state-they-are-to-be-found)
