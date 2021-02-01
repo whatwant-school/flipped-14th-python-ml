@@ -31,6 +31,10 @@ Choose best feature to split
 ![random-forest-selection-voting](img/random-forest-selection-voting.png)
 
 
+# Recommended Videos
+- [Random Forest - Fun and Easy Machine Learning](https://www.youtube.com/watch?v=D_2LkhMJcfY)
+  - 나름 깔끔하게 부담없이 볼 수 있도록 이미지 위주의 설명
+
 # Reference
 
 - [Minsuk Heo - 랜덤포레스트](https://www.youtube.com/watch?v=nZB37IBCiSA)
