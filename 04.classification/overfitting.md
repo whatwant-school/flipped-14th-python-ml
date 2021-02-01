@@ -43,9 +43,17 @@ error rate & bias & variance 모두 낮은 부분을 찾아야 한다.
 1. if validation accuracy is lower, do regularization!
 1. repeat regulaization until no overfitting
 
+
 ### Regularization
 
 ![regularization](img/regularization.png)
+
+- Let model simpler by giving more bias and less variance
+
+![regularization-func](img/regularization-func.png)
+
+- 앞의 계숫값을 줄임으로써 그래프가 가파른 것이 조금 더 완만해짐을 볼 수 있다 = variance 낮아졌음
+
 
 ### Add more data as much as possible
 
