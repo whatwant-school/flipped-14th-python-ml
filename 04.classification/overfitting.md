@@ -55,9 +55,19 @@ error rate & bias & variance 모두 낮은 부분을 찾아야 한다.
 - 앞의 계숫값을 줄임으로써 그래프가 가파른 것이 조금 더 완만해짐을 볼 수 있다 = variance 낮아졌음
 
 
-### Add more data as much as possible
+### Early Stopping
+
+![early-stopping](img/early-stopping.png)
+
+- having too much iteration may cause too much variance on train data, once validation accuracy stop increasing, stop iteration
 
 
+### Drop Out
+
+![drop-out](img/drop-out.png)
+
+- During training, let some neurons sleep randomly! This helps avoiding overfitting.
+- 앙상블의 배깅과 비슷?!
 
 
 # Reference
