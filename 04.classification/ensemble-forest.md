@@ -7,6 +7,33 @@ Choose best feature to split
 ![favorite-model](img/favorite-model.png)
 
 
+## Ensemble
+
+- 하나의 모델이 아니라 여러 개 모델의 어울림 예측
+- Regression 문제에서는 평균값을 예측함
+- Stacking (meta-ensemble) 등으로 발전
+- 학습은 오래 걸리나 성능이 매우 좋음
+- Kaggle의 대세 기법 (structed dataset)
+- Meta-classifier
+
+
+### Meta-classifier
+여러 clssifier model들이 예측한 결과를 종합해서 최종 예측을 해주는 것
+
+![ensemble-model](img/ensemble-model.png)
+
+
+### Bootstrap
+
+- 학습 데이터에서 임의의 복원 추출
+  - subset 학습 데이터 n개를 추출하는 것
+
+### Bagging
+
+- 
+
+
+
 ## decision tree vs. random forest
 
 ![random-forest](img/random-forest.png)
