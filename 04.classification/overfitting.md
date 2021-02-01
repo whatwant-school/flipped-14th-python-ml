@@ -11,10 +11,8 @@
 
 ### trade-off
 error rate & bias & variance 모두 낮은 부분을 찾아야 한다.
+
 ![tradeoff](img/tradeoff.png)
-
-
-
 
 
 ## Underfitting vs. Overfitting
@@ -27,13 +25,29 @@ error rate & bias & variance 모두 낮은 부분을 찾아야 한다.
 
 
 
+## How to overcome underfitting?
+
+- Find more features
+- Try high variance machine learning models (Decision Tree, k-NN, SVM)
+
+
+## How to find if overfitting ?
+
+- when test error is much higher than training error
 
 
 ## How to overcome overfitting?
 
-- Regularization
-- Cross Validation
-- Add more data as much as possible
+### Cross Validation (K-Folds Cross Validation)
+1. During training, test against validation data
+1. if validation accuracy is lower, do regularization!
+1. repeat regulaization until no overfitting
+
+### Regularization
+
+![regularization](img/regularization.png)
+
+### Add more data as much as possible
 
 
 
