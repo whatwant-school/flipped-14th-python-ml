@@ -28,10 +28,15 @@ Choose best feature to split
 - 학습 데이터에서 임의의 복원 추출
   - subset 학습 데이터 n개를 추출하는 것
 
-### Bagging
 
-- 
+### Bagging (Bootstrap Aggregating)
+ 
+- Bootstrap의 subset sample로 모델 n개를 학습 (앙상블-Ensemble)
+- 하나의 모델에 다양한 데이터 대입
+- High variance(overfitting이 심함) 모델에 적합하다는 견해도 존재
 
+
+### decision Tree + Bagging = Random Forest
 
 
 ## decision tree vs. random forest
