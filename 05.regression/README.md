@@ -67,11 +67,28 @@ L2, L1 규제를 함께 결합한 모델
 ![04-sse.png](img/04-sse.png)
 
 
+- RSS = 비용 함수 = 손실 함수 (loss function)
+  - RSS : 오차의 평균
+
+
 ![05-rss.png](img/05-rss.png)
 
 
-- RSS = 비용 함수 = 손실 함수 (loss function)
-
-
 ## 비용 최소화 = 경사 하강법 (Gradient Descent)
+RSS를 가지고 w의 편미분, b의 편미분을 한 결과를 이용
+
+
+- w 편미분
+
+![06-w.png](img/06-w.png)
+
+
+- b 편미분
+
+![07-b.png](img/07-b.png)
+
+
+- 편미분 결과를 이용하여 다음 값을 계산
+
+![08-wb.png](img/08-wb.png)
 
