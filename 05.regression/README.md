@@ -95,3 +95,15 @@ RSS를 가지고 w의 편미분, b의 편미분을 한 결과를 이용
 
 ## Gradient Descent 실습
 - [gradient_descent.ipynb](gradient_descent.ipynb)
+
+
+## 보스턴 주택 가격 회귀 구현
+- [sklearn_boston.ipynb](sklearn_boston.ipynb)
+
+
+---
+
+
+## 다항 회귀 (Polynomial Regression)
+
+
