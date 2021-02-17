@@ -92,3 +92,6 @@ RSS를 가지고 w의 편미분, b의 편미분을 한 결과를 이용
 
 ![08-wb.png](img/08-wb.png)
 
+
+## Gradient Descent 실습
+- [gradient_descent.ipynb](gradient_descent.ipynb)
