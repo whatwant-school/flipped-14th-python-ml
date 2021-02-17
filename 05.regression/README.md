@@ -106,4 +106,14 @@ RSS를 가지고 w의 편미분, b의 편미분을 한 결과를 이용
 
 ## 다항 회귀 (Polynomial Regression)
 
+![10-polynomial.png](img/10-polynomial.png)
 
+
+### Linear Regression
+
+![11-linear.png](img/11-linear.png)
+
+
+### Polynomial Regression
+
+![12-polynomial.png](img/12-polynomial.png)
