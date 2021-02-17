@@ -3,6 +3,7 @@
   - Site : https://home.modulabs.co.kr/product/14th-its-too-thick-to-read-alone-fight-guide-to-python-machine-learning/
   - Notion : https://www.notion.so/9e7e58289d0147a18d0a77e3d7706b28
   - Book : https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=229787634
+  - code : https://github.com/wikibook/ml-definitive-guide
 
 ## 기본 정보
 
