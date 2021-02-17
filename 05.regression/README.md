@@ -108,6 +108,10 @@ RSS를 가지고 w의 편미분, b의 편미분을 한 결과를 이용
 
 ![10-polynomial.png](img/10-polynomial.png)
 
+- 단순 선형 회귀 (Simple Linear Regression)
+- 다중 선형 회귀 (Multiple Linear Regression)
+- 다항 선형 회귀 (Polynomial Linear Regression)
+
 
 ### Linear Regression
 
