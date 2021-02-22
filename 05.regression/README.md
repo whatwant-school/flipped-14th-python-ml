@@ -121,3 +121,89 @@ RSS를 가지고 w의 편미분, b의 편미분을 한 결과를 이용
 ### Polynomial Regression
 
 ![12-polynomial.png](img/12-polynomial.png)
+
+
+### PolynomialFeatures
+- \[ x<sub>1</sub>, x<sub>2</sub> ] → \[ 1, x<sub>1</sub>, x<sub>2</sub>, x<sub>1</sub><sup>2</sup>, x<sub>1</sub>x<sub>2</sub>, x<sub>2</sub><sup>2</sup> ]
+
+```python
+from sklearn.preprocessing import PolynomialFeatures
+import numpy as np
+
+# 다항식으로 변환한 단항식 생성, [[0,1],[2,3]]의 2X2 행렬 생성
+X = np.arange(4).reshape(2,2)
+print('일차 단항식 계수 feature:\n',X )
+
+# degree = 2 인 2차 다항식으로 변환하기 위해 PolynomialFeatures를 이용하여 변환
+poly = PolynomialFeatures(degree=2)
+poly.fit(X)
+poly_ftr = poly.transform(X)
+print('변환된 2차 다항식 계수 feature:\n', poly_ftr)
+```
+
+- 모델링 알고리즘이 아니라, 변환기이다.
+
+```python
+def polynomial_func(X):
+    y = 1 + 2 * X + X ** 2 + X ** 3
+    return y
+
+X = np.arange(4).reshape(2,2)
+print('일차 단항식 계수 feature: \n' ,X)
+y = polynomial_func(X)
+print('삼차 다항식 결정값: \n', y)
+
+# 3 차 다항식 변환 
+poly_ftr = PolynomialFeatures(degree=3).fit_transform(X)
+print('3차 다항식 계수 feature: \n',poly_ftr)
+
+# Linear Regression에 3차 다항식 계수 feature와 3차 다항식 결정값으로 학습 후 회귀 계수 확인
+model = LinearRegression()
+model.fit(poly_ftr,y)
+print('Polynomial 회귀 계수\n' , np.round(model.coef_, 2))
+print('Polynomial 회귀 Shape :', model.coef_.shape)
+```
+
+- `PolynomialFeatures → LinearRegression` 방법으로 다항 회귀 구현
+
+- `Pipeline`을 이용해서 한 번에 구현 가능
+
+```python
+from sklearn.preprocessing import PolynomialFeatures
+from sklearn.linear_model import LinearRegression
+from sklearn.pipeline import Pipeline
+import numpy as np
+
+def polynomial_func(X):
+    y = 1 + 2 * X + X ** 2 + X ** 3
+    return y
+
+# Pipeline 객체로 Streamline 하게 Polynomial Feature변환과 Linear Regression을 연결
+model = Pipeline([('poly', PolynomialFeatures(degree=3)), ('linear', LinearRegression())])
+X = np.arange(4).reshape(2,2)
+y = polynomial_func(X)
+
+model = model.fit(X, y)
+print('Polynomial 회귀 계수\n', np.round(model.named_steps['linear'].coef_, 2))
+```
+
+
+### degree = 다항 회귀의 차수
+- degree ↑ = 복잡한 피처 간의 관계까지 모델링 가능 = 학습 데이터에만 맞춘 학습 = 테스트 환경에서 정확도 하락 = 과적합
+
+
+### 편향-분산 트레이드오프 (Bias-Variance Trade off)
+
+![bias_variance.png](../04.classification/img/bias_variance.png)
+
+- degree=1  → 매우 단순화된 모델 = 지나치게 한 방향성으로 치우침 = 고편향 (High Bias)
+- degree=15 → 매우 복잡한 모델 = 지나치게 높은 변동성 = 고분산 (High Variance)
+
+- 편향이 높으면 분산은 낮아짐 = 과소 적합
+- 분산이 높으면 편향이 낮아짐 = 과대 적합
+
+- 편향을 낮추고 분산을 높이면서 전체 오류가 가장 낮아지는 지점 = `골디락스`
+
+
+
+## 규제 선형 모델 - 릿지 / 라쏘 / 엘라스틱넷
