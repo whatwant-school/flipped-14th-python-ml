@@ -5,6 +5,14 @@
 - 수백 개 이상의 피처로 구성된 데이터 세트 → 상대적으로 적은 차원에서 학습된 모델보다 예측 신뢰도 낮음
 - 피처 多 → 개별 피처 間 상관 관계가 높을 가능성 大 → 선형 모델에서 이로 인한 `다중 공선성 문제`로 모델 예측 성능 저하
 
+## (추가) 차원의 저주 (Curse of Dimensionality)
+- 차원이 높아질수록 필요한 데이터의 수는 기하급수적으로 증가
+
+![curse_of_dimensionality.png](img/curse_of_dimensionality.png)
+
+- 고차원의 데이터들은 의미를 제대로 표현하기 어려움 → 차원 축소 필요
+- 차원 축소 = 데이터의 의미를 제대로 표현하는 특징을 추려내는 것
+
 
 ## 차원 축소
 
@@ -22,13 +30,33 @@
 
 ---
 
-## PCA (Principal Component Analysis)
+## PCA (Principal Component Analysis, 주성분 분석)
 여러 변수 간에 존재하는 상관관계를 이용해 이를 대표하는 주성분(Principal Component)을 추출해 차원을 축소하는 기법
 
 - PCA로 차원을 축소할 때 기존 데이터의 정보 유실이 최소화 되도록...
 - 이를 위해서 PCA는 가장 높은 분산을 갖는 데이터의 축을 찾아 이 축으로 차원을 축소 ← 이것이 PCA의 주성분
 
 > 입력 데이터의 변동성이 가장 큰 축을 구하고, 다시 이 축에 직각인 축을 반복적으로 축소하려는 차원 개수만큼 구한 뒤 입력 데이터를 이 축들에 투영해 차원을 축소하는 방식
+
+
+### (추가) 사례 : http://t-robotics.blogspot.com/2013/07/pca.html
+
+![pca.png](img/pca.png)
+
+- 약 1000개의 3차원 데이터
+  - (x,y,z) 좌표 1000개 = 3000개 숫자 저장
+  - But, 거의 한 평면에 존재 → 좌표축만 잘 설정한다면 z값 필요없이 (x, y)값만으로도 표현 가능 → 2000개 숫자로 데이터 감소
+- UIUC의 박사과정 학생 Jia-Bin Huang은 미스코리아 대회에 출전한 20명의 얼굴이 얼마나 공통점이 많을까 PCA로 압축 시도
+  - 6개의 eigenface(대표적 얼굴)로 대표 가능
+
+![similarShape.gif](img/similarShape.gif)
+
+
+### (추가) PCA는 피처 선택일까 피처 추출일까?
+- 피처 추출(feature extraction)이다. 피처 선택(feature selection)이 아니다.
+
+![selection_and_extraction.png](img/selection_and_extraction.png)
+
 
 
 ## LDA (Linear Discriminant Analysis, 선형 판별 분석법)
